@@ -1,0 +1,44 @@
+
+from abc import ABC
+class absy(ABC):
+
+    adress = "C:\\Users\\C605\\Desktop\\pytexty.txt"
+
+    def __init__(self,adress):
+        self.address = adress
+
+    def calculatefreqs(self):
+        pass
+
+
+class Listcount(absy):
+
+    def calculatefreqs(self):
+
+        adress = open("C:\\Users\\C605\\Desktop\\pytexty.txt")
+        lines = []
+        liner2 = []
+        for line in adress:
+            lines.append(line.split())
+
+        for i in lines:
+
+            if i not in liner2:
+                liner2.append(i)
+
+
+        for i in range(0, len(liner2)):
+            print("frequency of :" , liner2[i]," is ",lines.count(liner2[i]))
+
+
+
+
+class Dictcount(absy):
+    def ferret(self):
+
+        print("i will be done in some time")
+
+
+class main:
+    countable = Dictcount
+    countable.ferret()
